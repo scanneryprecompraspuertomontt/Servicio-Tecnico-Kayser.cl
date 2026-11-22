@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inspección precompra de vehículos en Puerto Montt | Servicio Técnico Kayser</title>
+<meta name="description" content="Inspecciones precompra en Puerto Montt y alrededores a cargo de un Ingeniero en Mecánica Automotriz y Autotrónica. Autos y SUV $30.000, camionetas $40.000. Incluye informe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#0b0b0c; --grafito:#151517; --panel:#1c1c1f; --linea:#2e2e33;
+    --rojo:#e4141b; --rojo-osc:#a80d12; --blanco:#fff; --gris:#b9bbc0;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--negro);color:var(--blanco);font:400 18px/1.6 "Barlow",system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+  h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;font-style:italic;font-weight:800;line-height:1;margin:0}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  :focus-visible{outline:3px solid #fff;outline-offset:3px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  /* barra superior */
+  .barra{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--linea)}
+  .barra .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:10px;padding-bottom:10px}
+  .marca{display:flex;align-items:center;gap:12px;text-decoration:none;font:800 1.35rem/1 "Barlow Condensed",Arial,sans-serif;font-style:italic}
+  .marca img{width:46px;height:auto}
+  .marca small{display:block;font:500 .72rem/1.2 "Barlow",Arial,sans-serif;font-style:normal;color:var(--gris)}
+  .btn{display:inline-block;background:var(--rojo);color:#fff;text-decoration:none;font-weight:600;padding:13px 24px;border-radius:4px;border:2px solid var(--rojo);transition:background .15s}
+  .btn:hover{background:var(--rojo-osc);border-color:var(--rojo-osc)}
+  .btn.borde{background:transparent;border-color:#5a5a61}
+  .btn.borde:hover{background:#fff;color:var(--negro);border-color:#fff}
+  .barra .btn{padding:9px 18px;font-size:.95rem}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;background:radial-gradient(1200px 500px at 85% 0,#3a0a0c 0,transparent 60%),var(--negro)}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--rojo),transparent 70%)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;padding-top:56px;padding-bottom:64px}
+  .hero h1{font-size:clamp(2.8rem,7vw,5.2rem);letter-spacing:-.01em}
+  .hero h1 em{display:block;color:var(--rojo);font-style:italic}
+  .hero .zona{font:700 clamp(1.3rem,3vw,1.8rem)/1.1 "Barlow Condensed",Arial,sans-serif;font-style:italic;margin:14px 0 22px}
+  .hero p{color:var(--gris);max-width:32em;margin:0 0 28px}
+  .acciones{display:flex;flex-wrap:wrap;gap:12px}
+  .foto{position:relative;border-radius:6px;overflow:hidden;border:1px solid var(--linea);box-shadow:0 24px 60px rgba(0,0,0,.6)}
+  .foto img{width:100%;height:auto}
+  .foto figcaption{position:absolute;left:0;bottom:0;background:var(--rojo);padding:10px 18px;font:700 1.05rem/1.2 "Barlow Condensed",Arial,sans-serif;font-style:italic;max-width:78%}
+  .foto{margin:0}
+
+  /* datos clave */
+  .datos{background:var(--grafito);border-block:1px solid var(--linea)}
+  .datos .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+  .dato{padding:26px 22px;border-right:1px solid var(--linea)}
+  .dato:last-child{border-right:0}
+  .dato b{display:block;font:800 1.7rem/1.1 "Barlow Condensed",Arial,sans-serif;font-style:italic}
+  .dato span{color:var(--gris);font-size:.97rem}
+
+  section{padding:76px 0}
+  h2{font-size:clamp(2.1rem,5vw,3.2rem);margin-bottom:12px}
+  h2::after{content:"";display:block;width:64px;height:5px;background:var(--rojo);margin-top:14px}
+  .sub{color:var(--gris);max-width:38em;margin:16px 0 36px}
+
+  /* precios */
+  .precios{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .precio{background:linear-gradient(160deg,var(--panel),#121214);border:1px solid var(--linea);border-top:5px solid var(--rojo);border-radius:6px;padding:30px 28px}
+  .precio .monto{font:800 clamp(3rem,7vw,4.4rem)/1 "Barlow Condensed",Arial,sans-serif;font-style:italic}
+  .precio h3{font-size:1.6rem;margin:6px 0 10px;color:var(--rojo)}
+  .precio p{margin:0;color:var(--gris);font-size:1rem}
+
+  /* revisión */
+  .revision{background:var(--grafito);border-block:1px solid var(--linea)}
+  .lista{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;list-style:none;margin:0 0 22px;padding:0}
+  .lista li{background:var(--panel);border:1px solid var(--linea);border-radius:6px;padding:18px 18px 18px 54px;position:relative;font-weight:600}
+  .lista li::before{content:"";position:absolute;left:18px;top:50%;width:11px;height:20px;border:solid var(--rojo);border-width:0 4px 4px 0;transform:translateY(-62%) rotate(45deg)}
+  .extra{background:var(--rojo);border-radius:6px;padding:18px 24px;font:700 1.4rem/1.2 "Barlow Condensed",Arial,sans-serif;font-style:italic}
+
+  /* informe */
+  .informe .wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+  .informe h2{font-size:clamp(2.6rem,7vw,4.6rem)}
+  .informe h2 em{color:var(--rojo);font-style:italic}
+  .informe h2::after{display:none}
+  .informe p{color:var(--gris);margin:12px 0 0;max-width:34em}
+  .icono{width:150px;height:170px;border:3px solid #fff;border-radius:12px;position:relative;background:var(--panel)}
+  .icono::before{content:"";position:absolute;left:24px;right:24px;top:34px;height:4px;background:#fff;box-shadow:0 22px 0 #fff,0 44px 0 #fff,0 66px 0 #fff}
+  .icono::after{content:"";position:absolute;right:-18px;bottom:-18px;width:56px;height:56px;border-radius:50%;background:var(--rojo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/62% no-repeat;border:3px solid var(--negro)}
+
+  /* quién */
+  .quien{background:linear-gradient(180deg,var(--grafito),var(--negro))}
+  .quien .wrap{display:grid;grid-template-columns:260px 1fr;gap:44px;align-items:center}
+  .quien img{width:100%;height:auto}
+  .quien p{color:var(--gris);margin:0 0 14px;max-width:36em}
+  .quien strong{color:#fff}
+
+  /* contacto */
+  .contacto{background:linear-gradient(120deg,var(--rojo-osc),var(--rojo));text-align:center}
+  .contacto h2{font-size:clamp(2.2rem,6vw,3.6rem)}
+  .contacto h2::after{margin-inline:auto;background:#fff}
+  .contacto p{margin:14px auto 22px;max-width:30em}
+  .tel{display:block;font:800 clamp(2.6rem,9vw,5rem)/1 "Barlow Condensed",Arial,sans-serif;font-style:italic;text-decoration:none;margin-bottom:26px}
+  .contacto .acciones{justify-content:center}
+  .contacto .btn{background:#fff;color:var(--negro);border-color:#fff}
+  .contacto .btn:hover{background:var(--negro);color:#fff;border-color:var(--negro)}
+  .contacto .btn.borde{background:transparent;color:#fff;border-color:#fff}
+  .contacto .btn.borde:hover{background:var(--negro);border-color:var(--negro)}
+
+  footer{position:relative;background:var(--negro);padding:0}
+  footer .paisaje{height:90px;background:url(puerto-montt.jpg) center/cover;opacity:.7;mask-image:linear-gradient(180deg,transparent,#000)}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-top:18px;padding-bottom:26px;color:var(--gris);font-size:.92rem}
+
+  @media (max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;padding-top:40px}
+    .lista{grid-template-columns:1fr 1fr}
+    .quien .wrap{grid-template-columns:150px 1fr;gap:24px}
+  }
+  @media (max-width:640px){
+    body{font-size:17px}
+    section{padding:56px 0}
+    .datos .wrap{grid-template-columns:1fr}
+    .dato{border-right:0;border-bottom:1px solid var(--linea)}
+    .dato:last-child{border-bottom:0}
+    .precios,.informe .wrap{grid-template-columns:1fr}
+    .lista{grid-template-columns:1fr}
+    .quien .wrap{grid-template-columns:1fr}
+    .quien img{max-width:150px}
+    .marca small{display:none}
+    .icono{width:110px;height:126px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Servicio Técnico Kayser, inicio">
+      <img src="logo-kayser.png" alt="Logo Servicio Técnico Kayser" width="46" height="47">
+      <span>Servicio Técnico Kayser<small>Puerto Montt y alrededores</small></span>
+    </a>
+    <a class="btn" href="tel:+56951086174">Llamar ahora</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Inspecciones <em>pre compra</em></h1>
+        <div class="zona">En Puerto Montt y alrededores</div>
+        <p>Antes de pagar, conoce el estado real del vehículo. Un Ingeniero en Mecánica Automotriz y Autotrónica revisa el auto con herramientas profesionales y te entrega un informe.</p>
+        <div class="acciones">
+          <a class="btn" href="https://wa.me/56951086174?text=Hola%2C%20quiero%20agendar%20una%20inspecci%C3%B3n%20pre%20compra">Agendar por WhatsApp</a>
+          <a class="btn borde" href="#que-se-revisa">Qué se revisa</a>
+        </div>
+      </div>
+      <figure class="foto">
+        <img src="mecanico.jpg" width="524" height="322" alt="Técnico de Servicio Técnico Kayser revisando el motor de un vehículo con una linterna">
+        <figcaption>Ingeniero en Mecánica Automotriz y Autotrónica a cargo del servicio</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="datos">
+    <div class="wrap">
+      <div class="dato"><b>40 min a 1 hora</b><span>Tiempo de revisión</span></div>
+      <div class="dato"><b>Herramientas profesionales</b><span>Los vehículos se revisan con equipo especializado</span></div>
+      <div class="dato"><b>Informe incluido</b><span>Con el resultado de la inspección</span></div>
+    </div>
+  </div>
+
+  <section id="precios">
+    <div class="wrap">
+      <h2>Valores</h2>
+      <p class="sub">Precio único por vehículo, con informe incluido.</p>
+      <div class="precios">
+        <div class="precio">
+          <div class="monto">$30.000</div>
+          <h3>Autos y SUV</h3>
+          <p>Inspección pre compra completa.</p>
+        </div>
+        <div class="precio">
+          <div class="monto">$40.000</div>
+          <h3>Camionetas</h3>
+          <p>Inspección pre compra completa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="revision" id="que-se-revisa">
+    <div class="wrap">
+      <h2>Se revisa todo lo que es:</h2>
+      <p class="sub">Los sistemas que más dinero cuestan cuando fallan después de la compra.</p>
+      <ul class="lista">
+        <li>Motor</li>
+        <li>Caja de cambios</li>
+        <li>Caja de transferencia</li>
+        <li>Cardán</li>
+        <li>Diferencial</li>
+        <li>Suspensión</li>
+        <li>Dirección</li>
+        <li>Frenos</li>
+      </ul>
+      <div class="extra">Además de habitáculo y exterior.</div>
+    </div>
+  </section>
+
+  <section class="informe">
+    <div class="wrap">
+      <div class="icono" aria-hidden="true"></div>
+      <div>
+        <h2>Se incluye <em>informe</em></h2>
+        <p>Compra con confianza, revisa antes de decidir. Con el informe en mano puedes negociar con datos reales o descartar un auto que no te conviene.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quien">
+    <div class="wrap">
+      <img src="logo-kayser.png" width="330" height="337" alt="Logo Servicio Técnico Kayser">
+      <div>
+        <h2>Quién hace la revisión</h2>
+        <p class="sub" style="margin-bottom:0">El servicio está a cargo de un <strong>Ingeniero en Mecánica Automotriz y Autotrónica</strong>. Cada vehículo se revisa con herramientas profesionales, en una visita de entre 40 minutos y 1 hora, y atendemos en Puerto Montt y alrededores.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="wrap">
+      <h2>Contáctanos</h2>
+      <p>Cuéntanos qué vehículo quieres revisar y coordinamos el día y la hora.</p>
+      <a class="tel" href="tel:+56951086174">+56 9 5108 6174</a>
+      <div class="acciones">
+        <a class="btn" href="https://wa.me/56951086174?text=Hola%2C%20quiero%20agendar%20una%20inspecci%C3%B3n%20pre%20compra">Escribir por WhatsApp</a>
+        <a class="btn borde" href="tel:+56951086174">Llamar</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="paisaje" aria-hidden="true"></div>
+  <div class="wrap">
+    <span>Servicio Técnico Kayser · Puerto Montt y alrededores</span>
+    <span>Inspecciones pre compra</span>
+  </div>
+</footer>
+
+</body>
+</html>
