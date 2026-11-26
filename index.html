@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inspecciones Pre Compra Puerto Montt - Escáner Automotriz Profesional</title>
+<meta name="description" content="Inspecciones pre compra en Puerto Montt y alrededores a cargo de un Ingeniero en Mecánica Automotriz y Autotrónica. Autos y SUV $30.000, camionetas $40.000. Incluye informe y escáner profesional.">
+<meta property="og:site_name" content="Inspecciones Pre Compra Puerto Montt - Escáner Automotriz Profesional">
+<meta property="og:title" content="Inspecciones Pre Compra Puerto Montt - Escáner Automotriz Profesional">
+<meta property="og:description" content="Inspecciones pre compra en Puerto Montt y alrededores a cargo de un Ingeniero en Mecánica Automotriz y Autotrónica. Autos y SUV $30.000, camionetas $40.000. Incluye informe y escáner profesional.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Inspecciones Pre Compra Puerto Montt - Escáner Automotriz Profesional",
+  "description": "Inspecciones pre compra en Puerto Montt y alrededores a cargo de un Ingeniero en Mecánica Automotriz y Autotrónica. Autos y SUV $30.000, camionetas $40.000. Incluye informe y escáner profesional.",
+  "telephone": "+56 9 5108 6174",
+  "areaServed": "Puerto Montt y alrededores",
+  "priceRange": "$30.000 - $40.000 CLP"
+}
+</script>
+<style>
+  :root {
+    --bg: #0b0b0c;
+    --surface: #141417;
+    --panel: #1c1c20;
+    --border: #2e2e35;
+    --input-border: #3c3c45;
+    --primary: #e4141b;
+    --primary-deep: #a80d12;
+    --primary-glow: #ff2b33;
+    --fg: #fafafa;
+    --muted: #b9bbc2;
+    --success: #34c759;
+    --warning: #f5b942;
+    --shadow-card: 0 24px 60px -12px rgba(0, 0, 0, 0.65);
+    --shadow-crimson: 0 18px 44px -14px rgba(228, 20, 27, 0.48);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 400 17px/1.6 "Barlow", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .display {
+    font-family: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 0.98;
+    margin: 0;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  button, input { font-family: inherit; }
+  :focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+  .wrap { max-width: 1152px; margin: 0 auto; padding: 0 20px; }
+
+  /* Header */
+  .header {
+    position: sticky; top: 0; z-index: 40;
+    background: rgba(11, 11, 12, 0.94);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+  }
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 10px 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0;
+  }
+  .brand img { width: 44px; height: 44px; object-fit: contain; flex-shrink: 0; }
+  .brand-text { min-width: 0; line-height: 1.1; }
+  .brand-title {
+    display: block; font-size: 1.25rem; color: var(--fg); letter-spacing: -0.01em;
+  }
+  .brand-sub {
+    display: block; font-size: 0.74rem; font-weight: 600; color: var(--primary);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .nav { display: flex; align-items: center; gap: 24px; }
+  .nav a {
+    text-decoration: none; font-size: 0.9rem; font-weight: 500; color: var(--muted);
+    transition: color 0.15s;
+  }
+  .nav a:hover, .nav a.active { color: var(--primary); font-weight: 600; }
+  .header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .menu-toggle {
+    display: none; align-items: center; justify-content: center;
+    width: 38px; height: 38px; border-radius: 6px;
+    border: 1px solid var(--border); background: var(--panel); color: var(--fg); cursor: pointer;
+  }
+  .mobile-nav {
+    display: none; border-top: 1px solid var(--border); background: var(--surface); padding: 12px 20px;
+  }
+  .mobile-nav.open { display: flex; flex-direction: column; gap: 4px; }
+  .mobile-nav a {
+    text-decoration: none; padding: 9px 12px; border-radius: 6px;
+    font-size: 0.95rem; font-weight: 500; color: var(--fg);
+  }
+  .mobile-nav a:hover { background: var(--panel); color: var(--primary); }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    text-decoration: none; font-weight: 600; border-radius: 6px; cursor: pointer;
+    border: 2px solid transparent; transition: all 0.16s ease; font-size: 0.96rem;
+    padding: 12px 22px;
+  }
+  .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .btn-primary {
+    background: var(--primary); border-color: var(--primary); color: #fff;
+    box-shadow: var(--shadow-crimson);
+  }
+  .btn-primary:hover {
+    background: var(--primary-deep); border-color: var(--primary-deep); transform: translateY(-1px);
+  }
+  .btn-outline {
+    background: transparent; border-color: var(--input-border); color: var(--fg);
+  }
+  .btn-outline:hover {
+    background: var(--fg); border-color: var(--fg); color: var(--bg); transform: translateY(-1px);
+  }
+  .btn-contrast {
+    background: #fff; border-color: #fff; color: var(--bg);
+  }
+  .btn-contrast:hover {
+    background: var(--bg); border-color: var(--bg); color: #fff; transform: translateY(-1px);
+  }
+  .btn-contrast-outline {
+    background: transparent; border-color: rgba(255, 255, 255, 0.85); color: #fff;
+  }
+  .btn-contrast-outline:hover {
+    background: var(--bg); border-color: var(--bg); color: #fff; transform: translateY(-1px);
+  }
+  .btn-sm { padding: 8px 15px; font-size: 0.88rem; }
+  .btn-full { width: 100%; }
+
+  /* Hero */
+  .hero {
+    position: relative; overflow: hidden; border-bottom: 1px solid var(--border);
+    background:
+      radial-gradient(920px 460px at 82% 8%, rgba(228, 20, 27, 0.24), transparent 62%),
+      radial-gradient(620px 340px at 14% 92%, rgba(168, 13, 18, 0.18), transparent 65%),
+      var(--bg);
+  }
+  .hero-grid-bg {
+    position: absolute; inset: 0; pointer-events: none; opacity: 0.35;
+    background-image:
+      linear-gradient(to right, rgba(46, 46, 53, 0.45) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(46, 46, 53, 0.45) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .hero-inner {
+    position: relative; display: grid; grid-template-columns: 1fr 1fr;
+    gap: 44px; align-items: center; padding: 64px 0 72px;
+  }
+  .eyebrow {
+    margin: 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--primary);
+  }
+  .hero h1 { font-size: clamp(3.4rem, 7vw, 5.25rem); margin-top: 12px; letter-spacing: -0.01em; }
+  .hero h1 span { display: block; color: var(--primary); }
+  .hero-sub { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 14px; color: var(--fg); }
+  .hero-copy { color: var(--muted); max-width: 34em; margin: 18px 0 30px; font-size: 1.05rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-figure {
+    position: relative; margin: 0; border-radius: 8px; overflow: hidden;
+    border: 1px solid var(--border); background: var(--panel); box-shadow: var(--shadow-card);
+  }
+  .hero-figure img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+  .scan-line {
+    position: absolute; left: 0; right: 0; top: 0; height: 64px; pointer-events: none;
+    background: linear-gradient(180deg, rgba(228, 20, 27, 0.36), rgba(228, 20, 27, 0.08), transparent);
+    animation: scanSweep 4.2s ease-in-out infinite;
+  }
+  @keyframes scanSweep {
+    0% { transform: translateY(-100%); opacity: 0; }
+    20%, 80% { opacity: 0.85; }
+    100% { transform: translateY(420%); opacity: 0; }
+  }
+  .hero-figure figcaption {
+    position: absolute; left: 0; bottom: 0; max-width: 85%;
+    background: var(--primary); color: #fff; padding: 12px 18px;
+    font-size: 1.15rem;
+  }
+  .hero-bar { height: 6px; background: linear-gradient(90deg, var(--primary), rgba(228, 20, 27, 0.5), transparent); }
+
+  /* Key metrics */
+  .metrics { background: var(--surface); border-bottom: 1px solid var(--border); }
+  .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .metric {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 24px 22px; border-right: 1px solid var(--border);
+  }
+  .metric:first-child { padding-left: 0; }
+  .metric:last-child { border-right: 0; padding-right: 0; }
+  .metric svg { width: 24px; height: 24px; color: var(--primary); flex-shrink: 0; margin-top: 3px; }
+  .metric strong { display: block; font-size: 1.55rem; color: var(--fg); }
+  .metric span { display: block; color: var(--muted); font-size: 0.92rem; margin-top: 2px; }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  .section-title { font-size: clamp(2.4rem, 5vw, 3.2rem); }
+  .section-title::after {
+    content: ""; display: block; width: 64px; height: 5px; margin-top: 14px;
+    border-radius: 999px; background: linear-gradient(90deg, var(--primary), var(--primary-glow));
+  }
+  .section-sub { color: var(--muted); max-width: 40em; margin: 16px 0 36px; font-size: 1.05rem; }
+
+  /* Pricing */
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .price-card {
+    display: flex; flex-direction: column; justify-content: space-between;
+    background: linear-gradient(160deg, var(--panel), var(--bg));
+    border: 1px solid var(--border); border-top: 4px solid var(--primary);
+    border-radius: 8px; padding: 30px; box-shadow: var(--shadow-card);
+    transition: transform 0.2s ease;
+  }
+  .price-card:hover { transform: translateY(-4px); }
+  .price-amount { font-size: clamp(3.4rem, 7vw, 4.5rem); color: var(--fg); }
+  .price-name { font-size: 1.85rem; color: var(--primary); margin-top: 8px; }
+  .price-desc { color: var(--muted); margin: 8px 0 0; font-size: 0.98rem; }
+  .check-list {
+    list-style: none; margin: 20px 0 26px; padding: 20px 0 0; border-top: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .check-list li { display: flex; align-items: center; gap: 10px; font-size: 0.94rem; color: var(--fg); }
+  .check-list svg { width: 16px; height: 16px; color: var(--primary); flex-shrink: 0; }
+
+  /* Inspection Explorer */
+  .explorer { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .explorer-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 24px; align-items: stretch; }
+  .sys-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    list-style: none; margin: 0; padding: 0;
+  }
+  .sys-btn {
+    width: 100%; display: flex; align-items: center; gap: 12px;
+    padding: 14px 16px; border-radius: 6px; text-align: left; cursor: pointer;
+    border: 1px solid var(--border); background: rgba(28, 28, 32, 0.85);
+    color: var(--fg); font-weight: 600; font-size: 0.98rem; transition: all 0.16s;
+  }
+  .sys-btn:hover { border-color: rgba(228, 20, 27, 0.65); background: var(--panel); }
+  .sys-btn.active {
+    border-color: var(--primary); background: var(--panel); box-shadow: var(--shadow-crimson);
+  }
+  .sys-check {
+    width: 24px; height: 24px; border-radius: 4px; flex-shrink: 0;
+    background: rgba(228, 20, 27, 0.16); color: var(--primary);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .sys-check svg { width: 15px; height: 15px; }
+  .extra-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+  .extra-btn {
+    width: 100%; padding: 16px 20px; border-radius: 6px; text-align: left; cursor: pointer;
+    border: 2px solid var(--primary); background: rgba(228, 20, 27, 0.92); color: #fff;
+    transition: all 0.16s;
+  }
+  .extra-btn:hover { background: var(--primary); }
+  .extra-btn.active { border-color: #fff; background: var(--primary); }
+  .extra-btn .display { display: block; font-size: 1.5rem; }
+  .extra-btn small { display: block; margin-top: 4px; font-size: 0.78rem; opacity: 0.92; }
+
+  .detail-card {
+    display: flex; flex-direction: column; justify-content: space-between;
+    border-radius: 8px; border: 1px solid var(--border); border-top: 4px solid var(--primary);
+    background: var(--panel); padding: 26px; height: 100%;
+  }
+  .detail-head { display: flex; align-items: center; gap: 12px; }
+  .detail-icon {
+    width: 42px; height: 42px; border-radius: 6px; flex-shrink: 0;
+    background: rgba(228, 20, 27, 0.16); color: var(--primary);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .detail-icon svg { width: 20px; height: 20px; }
+  .detail-kicker { margin: 0; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--primary); }
+  .detail-card h3 { font-size: 1.9rem; margin-top: 2px; }
+  .detail-note { color: var(--muted); font-size: 0.96rem; margin: 16px 0 0; }
+  .detail-foot { margin: 24px 0 0; padding-top: 14px; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--muted); }
+
+  /* Report Preview */
+  .report-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 40px; align-items: center; }
+  .report-title { font-size: clamp(3rem, 6vw, 4rem); }
+  .report-title em { color: var(--primary); font-style: italic; }
+  .report-copy { color: var(--muted); margin: 18px 0 24px; font-size: 1.05rem; }
+  .report-points { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .report-points li { display: flex; align-items: center; gap: 10px; font-size: 0.96rem; }
+  .report-points svg { width: 20px; height: 20px; color: var(--primary); flex-shrink: 0; }
+  .report-box {
+    border-radius: 8px; border: 1px solid var(--border); background: var(--panel);
+    padding: 24px; box-shadow: var(--shadow-card);
+  }
+  .report-box-head {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 12px; padding-bottom: 16px; border-bottom: 1px solid var(--border);
+  }
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tab-btn {
+    padding: 7px 12px; border-radius: 4px; font-size: 0.8rem; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--border); background: var(--surface); color: var(--muted);
+    transition: all 0.15s;
+  }
+  .tab-btn:hover { color: var(--fg); }
+  .tab-btn.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .report-subtitle { font-size: 0.82rem; color: var(--muted); margin: 14px 0 0; }
+  .report-rows { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+  .report-row {
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+    padding: 12px 14px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface);
+  }
+  .report-row strong { display: block; font-size: 0.92rem; }
+  .report-row small { display: block; font-size: 0.8rem; color: var(--muted); }
+  .badge-ok, .badge-warn {
+    display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; flex-shrink: 0;
+  }
+  .badge-ok { color: var(--success); }
+  .badge-warn { color: var(--warning); }
+  .badge-ok svg, .badge-warn svg { width: 16px; height: 16px; }
+
+  /* Who */
+  .who { background: linear-gradient(180deg, var(--surface), var(--bg)); border-top: 1px solid var(--border); }
+  .who-grid { display: grid; grid-template-columns: 260px 1fr; gap: 44px; align-items: center; }
+  .who img { width: 240px; max-width: 100%; filter: drop-shadow(0 18px 34px rgba(228, 20, 27, 0.3)); }
+  .who p { color: var(--muted); margin: 18px 0 0; max-width: 38em; font-size: 1.05rem; }
+  .who strong { color: var(--fg); }
+
+  /* Contact */
+  .contact { background: linear-gradient(125deg, var(--primary-deep), var(--primary)); color: #fff; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .contact-title { font-size: clamp(2.6rem, 6vw, 3.8rem); }
+  .contact-title::after {
+    content: ""; display: block; width: 64px; height: 5px; margin-top: 14px;
+    border-radius: 999px; background: #fff;
+  }
+  .contact-copy { margin: 16px 0 0; max-width: 28em; font-size: 1.05rem; color: rgba(255, 255, 255, 0.92); }
+  .contact-tel {
+    display: block; text-decoration: none; margin: 22px 0 26px;
+    font-size: clamp(2.8rem, 7vw, 4rem); color: #fff;
+  }
+  .contact-tel:hover { opacity: 0.9; }
+
+  .booking-card {
+    background: rgba(11, 11, 12, 0.96); color: var(--fg);
+    border: 1px solid var(--border); border-radius: 8px; padding: 28px;
+    box-shadow: var(--shadow-card);
+  }
+  .booking-card h3 { font-size: 1.9rem; }
+  .booking-card > p { margin: 6px 0 0; font-size: 0.9rem; color: var(--muted); }
+  .field-label {
+    display: block; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 7px;
+  }
+  .veh-picker { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+  .veh-opt {
+    padding: 12px 14px; border-radius: 6px; text-align: left; cursor: pointer;
+    border: 1px solid var(--border); background: var(--surface); color: var(--fg); transition: all 0.15s;
+  }
+  .veh-opt:hover { border-color: rgba(228, 20, 27, 0.65); }
+  .veh-opt.active { border: 2px solid var(--primary); background: var(--panel); }
+  .veh-opt span { display: block; font-size: 0.88rem; font-weight: 600; }
+  .veh-opt strong { display: block; font-size: 1.55rem; color: var(--primary); margin-top: 2px; }
+  .inputs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+  .text-input {
+    width: 100%; padding: 10px 12px; border-radius: 6px;
+    border: 1px solid var(--input-border); background: var(--surface); color: var(--fg);
+    font-size: 0.92rem;
+  }
+  .text-input::placeholder { color: rgba(185, 187, 194, 0.65); }
+  .text-input:focus { border-color: var(--primary); outline: none; }
+  .booking-foot {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 12px; margin-top: 20px;
+  }
+  .booking-total { margin: 0; font-size: 0.92rem; color: var(--muted); }
+  .booking-total strong { font-size: 1.6rem; color: var(--fg); }
+
+  /* Footer */
+  footer { background: var(--bg); }
+  .landscape {
+    height: 105px; width: 100%; overflow: hidden;
+  }
+  .landscape img {
+    width: 100%; height: 100%; object-fit: cover; opacity: 0.78;
+    mask-image: linear-gradient(180deg, transparent 0%, #000 90%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 90%);
+  }
+  .footer-inner {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 12px; padding: 22px 0 74px; font-size: 0.9rem; color: var(--muted);
+  }
+
+  /* Floating WhatsApp */
+  .wa-float {
+    position: fixed; right: 20px; bottom: 20px; z-index: 35;
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--primary); color: #fff; text-decoration: none;
+    padding: 12px 18px; border-radius: 999px; font-weight: 600; font-size: 0.92rem;
+    box-shadow: var(--shadow-crimson); transition: transform 0.16s ease;
+  }
+  .wa-float:hover { transform: scale(1.05); }
+  .wa-float svg { width: 20px; height: 20px; }
+
+  .call-short { display: none; }
+
+  @media (max-width: 960px) {
+    .nav { display: none; }
+    .menu-toggle { display: inline-flex; }
+    .hero-inner, .explorer-grid, .report-grid, .contact-grid { grid-template-columns: 1fr; }
+    .contact-left { text-align: center; }
+    .contact-title::after { margin-inline: auto; }
+    .contact-copy { margin-inline: auto; }
+    .contact-left .actions { justify-content: center; }
+  }
+  @media (max-width: 640px) {
+    section { padding: 54px 0; }
+    .hero-inner { padding: 40px 0 50px; }
+    .brand-title { font-size: 1.02rem; }
+    .call-full { display: none; }
+    .call-short { display: inline; }
+    .metrics-grid, .pricing-grid, .sys-grid, .extra-grid, .inputs-grid, .who-grid {
+      grid-template-columns: 1fr;
+    }
+    .metric { border-right: 0; border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .metric:last-child { border-bottom: 0; }
+    .who img { width: 170px; margin: 0 auto; }
+    .report-row { flex-direction: column; align-items: flex-start; }
+    .wa-float span { display: none; }
+    .wa-float { padding: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .scan-line { animation: none; display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#inicio" aria-label="Inspecciones Pre Compra Puerto Montt - Escáner Automotriz Profesional">
+      <img src="logo-kayser.png" alt="Logo Inspecciones Pre Compra Puerto Montt" width="44" height="44">
+      <span class="brand-text">
+        <span class="brand-title display">Inspecciones Pre Compra Puerto Montt</span>
+        <span class="brand-sub">Escáner Automotriz Profesional</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#precios">Valores</a>
+      <a href="#que-se-revisa">Qué se revisa</a>
+      <a href="#informe">Informe</a>
+      <a href="#quien-revisa">Quién revisa</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-primary btn-sm" href="tel:+56951086174">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="call-full">Llamar ahora</span>
+        <span class="call-short">Llamar</span>
+      </a>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+    <a href="#precios">Valores</a>
+    <a href="#que-se-revisa">Qué se revisa</a>
+    <a href="#informe">Informe</a>
+    <a href="#quien-revisa">Quién revisa</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main id="inicio">
+  <section class="hero" style="padding:0">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow">Puerto Montt y alrededores</p>
+        <h1>Inspecciones <span>pre compra</span></h1>
+        <p class="hero-sub display">Escáner Automotriz Profesional</p>
+        <p class="hero-copy">Antes de pagar, conoce el estado real del vehículo. Un Ingeniero en Mecánica Automotriz y Autotrónica revisa el auto con herramientas profesionales y escáner automotriz, entregándote un informe claro para decidir con seguridad.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://wa.me/56951086174?text=Hola%2C%20quiero%20agendar%20una%20inspecci%C3%B3n%20pre%20compra" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            <span>Agendar por WhatsApp</span>
+          </a>
+          <a class="btn btn-outline" href="#que-se-revisa">
+            <span>Qué se revisa</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <figure class="hero-figure">
+        <img src="mecanico.jpg" width="524" height="322" alt="Ingeniero automotriz revisando el motor de un vehículo con linterna en Puerto Montt">
+        <div class="scan-line" aria-hidden="true"></div>
+        <figcaption class="display">Ingeniero en Mecánica Automotriz y Autotrónica a cargo del servicio</figcaption>
+      </figure>
+    </div>
+    <div class="hero-bar"></div>
+  </section>
+
+  <div class="metrics">
+    <div class="wrap metrics-grid">
+      <div class="metric">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>
+          <strong class="display">40 min a 1 hora</strong>
+          <span>Tiempo de revisión en terreno</span>
+        </div>
+      </div>
+      <div class="metric">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
+        <div>
+          <strong class="display">Escáner y equipo profesional</strong>
+          <span>Revisión con diagnóstico electrónico especializado</span>
+        </div>
+      </div>
+      <div class="metric">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>
+        <div>
+          <strong class="display">Informe incluido</strong>
+          <span>Con el resultado completo de la inspección</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="precios">
+    <div class="wrap">
+      <h2 class="section-title">Valores</h2>
+      <p class="section-sub">Precio único por vehículo, con escáner automotriz profesional e informe incluido.</p>
+      <div class="pricing-grid">
+        <article class="price-card">
+          <div>
+            <div class="price-amount display">$30.000</div>
+            <h3 class="price-name">Autos y SUV</h3>
+            <p class="price-desc">Inspección pre compra completa en terreno.</p>
+            <ul class="check-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Escáner automotriz profesional</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Revisión mecánica de los 8 sistemas clave</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Habitáculo, exterior e informe incluido</li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-primary btn-full" data-choose-plan="auto-suv">Agendar Autos y SUV</button>
+        </article>
+
+        <article class="price-card">
+          <div>
+            <div class="price-amount display">$40.000</div>
+            <h3 class="price-name">Camionetas</h3>
+            <p class="price-desc">Inspección pre compra completa, incluyendo tracción y transmisión.</p>
+            <ul class="check-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Escáner automotriz profesional</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Caja de transferencia, cardán y diferencial</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Habitáculo, exterior e informe incluido</li>
+            </ul>
+          </div>
+          <button type="button" class="btn btn-primary btn-full" data-choose-plan="camioneta">Agendar Camionetas</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="explorer" id="que-se-revisa">
+    <div class="wrap">
+      <h2 class="section-title">Se revisa todo lo que es:</h2>
+      <p class="section-sub">Los sistemas que más dinero cuestan cuando fallan después de la compra. Selecciona cada punto para ver qué revisamos en terreno.</p>
+      <div class="explorer-grid">
+        <div>
+          <ul class="sys-grid" id="mechanicalList"></ul>
+          <div class="extra-grid" id="extraList"></div>
+        </div>
+        <div class="detail-card" id="detailCard" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="informe">
+    <div class="wrap report-grid">
+      <div>
+        <h2 class="report-title">Se incluye <em>informe</em></h2>
+        <p class="report-copy">Compra con confianza, revisa antes de decidir. Con el informe en mano puedes negociar con datos reales o descartar un auto que no te conviene.</p>
+        <ul class="report-points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>Resumen claro por sistema mecánico y carrocería</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/></svg>Resultado del escáner automotriz profesional</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Hallazgos concretos para respaldar tu decisión de compra</li>
+        </ul>
+      </div>
+
+      <div class="report-box">
+        <div class="report-box-head">
+          <div>
+            <p class="detail-kicker">Ejemplo de estructura del informe</p>
+            <h3 id="reportTitle" style="font-size:1.65rem;margin-top:4px">Estado mecánico</h3>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Secciones del informe">
+            <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-report-tab="mecanica">Mecánica</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-report-tab="escaner">Escáner</button>
+            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-report-tab="carroceria">Exterior</button>
+          </div>
+        </div>
+        <p class="report-subtitle" id="reportSubtitle"></p>
+        <div class="report-rows" id="reportRows"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="who" id="quien-revisa">
+    <div class="wrap who-grid">
+      <img src="logo-kayser.png" width="240" height="245" alt="Emblema de respaldo técnico">
+      <div>
+        <h2 class="section-title">Quién hace la revisión</h2>
+        <p>El servicio está a cargo de un <strong>Ingeniero en Mecánica Automotriz y Autotrónica</strong>. Cada vehículo se revisa con herramientas profesionales y escáner automotriz, en una visita de entre 40 min a 1 hora, y atendemos en Puerto Montt y alrededores.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="wrap contact-grid">
+      <div class="contact-left">
+        <h2 class="contact-title">Contáctanos</h2>
+        <p class="contact-copy">Cuéntanos qué vehículo quieres revisar y coordinamos el día y la hora en Puerto Montt y alrededores.</p>
+        <a class="contact-tel display" href="tel:+56951086174">+56 9 5108 6174</a>
+        <div class="actions">
+          <a class="btn btn-contrast" id="directWaBtn" href="https://wa.me/56951086174?text=Hola%2C%20quiero%20agendar%20una%20inspecci%C3%B3n%20pre%20compra%20para%20Autos%20y%20SUV%20(%2430.000)" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            <span>Escribir por WhatsApp</span>
+          </a>
+          <a class="btn btn-contrast-outline" href="tel:+56951086174">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Llamar</span>
+          </a>
+        </div>
+      </div>
+
+      <form class="booking-card" id="bookingForm">
+        <h3>Agenda rápido por WhatsApp</h3>
+        <p>Prepara tu solicitud en segundos y abre WhatsApp con el mensaje listo.</p>
+
+        <div class="veh-picker" role="group" aria-label="Tipo de vehículo">
+          <button type="button" class="veh-opt active" data-veh="auto-suv" aria-pressed="true">
+            <span>Autos y SUV</span>
+            <strong class="display">$30.000</strong>
+          </button>
+          <button type="button" class="veh-opt" data-veh="camioneta" aria-pressed="false">
+            <span>Camionetas</span>
+            <strong class="display">$40.000</strong>
+          </button>
+        </div>
+
+        <div class="inputs-grid">
+          <div>
+            <label class="field-label" for="vehModel">Marca, modelo y año (opcional)</label>
+            <input class="text-input" id="vehModel" type="text" maxlength="80" placeholder="Ej: Toyota RAV4 2020">
+          </div>
+          <div>
+            <label class="field-label" for="vehSector">Sector / Comuna (opcional)</label>
+            <input class="text-input" id="vehSector" type="text" maxlength="80" placeholder="Ej: Puerto Montt, Puerto Varas">
+          </div>
+        </div>
+
+        <div class="booking-foot">
+          <p class="booking-total">Valor: <strong class="display" id="bookingPrice">$30.000</strong> · informe incluido</p>
+          <button type="submit" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            <span>Enviar a WhatsApp</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="landscape" aria-hidden="true">
+    <img src="puerto-montt.jpg" alt="">
+  </div>
+  <div class="wrap footer-inner">
+    <span>Inspecciones Pre Compra Puerto Montt - Escáner Automotriz Profesional</span>
+    <span>Puerto Montt y alrededores · +56 9 5108 6174</span>
+  </div>
+</footer>
+
+<a class="wa-float" id="floatWaBtn" href="https://wa.me/56951086174?text=Hola%2C%20quiero%20agendar%20una%20inspecci%C3%B3n%20pre%20compra" target="_blank" rel="noopener noreferrer" aria-label="Agendar inspección por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+(function () {
+  var SYSTEMS = [
+    { id: "motor", name: "Motor", cat: "mecanica", note: "Ruidos anormales, fugas, temperatura y funcionamiento general.", checks: ["Revisión de fugas de aceite, refrigerante y combustible", "Arranque en frío, ralentí estable y respuesta al acelerar", "Estado de correas, mangueras, soportes y niveles de fluidos"] },
+    { id: "caja-cambios", name: "Caja de cambios", cat: "mecanica", note: "Transmisión manual o automática sin tirones ni filtraciones.", checks: ["Acoplamiento limpio de marchas y punto de embrague", "Detección de golpes, deslizamientos o demoras al pasar cambios", "Inspección visual de sellos y filtraciones de lubricante"] },
+    { id: "caja-transferencia", name: "Caja de transferencia", cat: "mecanica", note: "Verificación de sistemas 4x4 y AWD.", checks: ["Acople y desacople correcto de tracción", "Control de ruidos mecánicos y vibraciones", "Revisión de retenes y posibles transpiraciones de aceite"] },
+    { id: "cardan", name: "Cardán", cat: "mecanica", note: "Holguras, crucetas y soporte central.", checks: ["Juego axial y radial en crucetas y juntas", "Estado del rodamiento y goma de soporte central", "Detección de golpes o vibraciones en tracción"] },
+    { id: "diferencial", name: "Diferencial", cat: "mecanica", note: "Sellado, zumbidos y transmisión al eje.", checks: ["Inspección de retenes de piñón y semiejes", "Control de zumbidos o holguras bajo carga", "Revisión de golpes en carcasa y respiradero"] },
+    { id: "suspension", name: "Suspensión", cat: "mecanica", note: "Estabilidad, amortiguadores, bujes y bandejas.", checks: ["Revisión de amortiguadores, espirales y topes", "Estado de rótulas, bieletas y bujes de bandeja", "Detección de ruidos en baches y desgaste irregular"] },
+    { id: "direccion", name: "Dirección", cat: "mecanica", note: "Precisión, cremallera, terminales y asistencia.", checks: ["Control de juego en columna, terminales y axiales", "Revisión de fuelles y fugas en cremallera de dirección", "Respuesta de dirección asistida sin durezas ni ruidos"] },
+    { id: "frenos", name: "Frenos", cat: "mecanica", note: "Discos, pastillas, flexibles y respuesta de frenado.", checks: ["Desgaste visible de pastillas y estado de discos", "Revisión de flexibles, cálipers y nivel de líquido", "Tacto del pedal y eficacia del freno de estacionamiento"] },
+    { id: "escaner", name: "Escáner automotriz profesional", cat: "extra", note: "Lectura electrónica de módulos y códigos de falla.", checks: ["Lectura de códigos de falla activos e históricos en módulos", "Revisión de sensores, parámetros en vivo y testigos", "Verificación de sistemas de seguridad (ABS, Airbag y motor)"] },
+    { id: "habitaculo", name: "Habitáculo y exterior", cat: "extra", note: "Carrocería, equipamiento interior y funcionamiento eléctrico.", checks: ["Alineación de paneles, indicios de choques o repintados", "Estado de tablero, climatización, alzavidrios y luces", "Revisión general de neumáticos, vidrios y estructura visible"] }
+  ];
+
+  var REPORTS = {
+    mecanica: {
+      title: "Estado mecánico",
+      subtitle: "Tren motriz, suspensión y frenos",
+      rows: [
+        { label: "Motor y fluidos", detail: "Sin fugas activas, ralentí parejo", ok: true },
+        { label: "Caja y tracción", detail: "Cambios suaves, cardán sin juego", ok: true },
+        { label: "Frenos delanteros", detail: "Desgaste medio: ideal para negociar", ok: false }
+      ]
+    },
+    escaner: {
+      title: "Escáner profesional",
+      subtitle: "Lectura completa de módulos OBD-II",
+      rows: [
+        { label: "Módulo Motor (ECU)", detail: "Sin códigos activos registrados", ok: true },
+        { label: "ABS y Airbag", detail: "Sensores y testigos verificados", ok: true },
+        { label: "Historial de fallas", detail: "Registro verificado en escaneo vivo", ok: true }
+      ]
+    },
+    carroceria: {
+      title: "Habitáculo y exterior",
+      subtitle: "Carrocería, interior y accesorios",
+      rows: [
+        { label: "Estructura y paneles", detail: "Líneas y ajustes revisados", ok: true },
+        { label: "Interior y controles", detail: "Tablero, aire y luces probados", ok: true },
+        { label: "Neumáticos", detail: "Desgaste parejo medido en terreno", ok: true }
+      ]
+    }
+  };
+
+  var PLANS = {
+    "auto-suv": { name: "Autos y SUV", price: "$30.000" },
+    "camioneta": { name: "Camionetas", price: "$40.000" }
+  };
+
+  var selectedSys = "motor";
+  var selectedVeh = "auto-suv";
+
+  var checkSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+  var okSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>';
+  var warnSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>';
+  var wrenchSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>';
+
+  var mechList = document.getElementById("mechanicalList");
+  var extraList = document.getElementById("extraList");
+  var detailCard = document.getElementById("detailCard");
+
+  function renderExplorer() {
+    mechList.innerHTML = "";
+    extraList.innerHTML = "";
+    SYSTEMS.forEach(function (sys) {
+      var isActive = sys.id === selectedSys;
+      if (sys.cat === "mecanica") {
+        var li = document.createElement("li");
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "sys-btn" + (isActive ? " active" : "");
+        btn.setAttribute("aria-pressed", String(isActive));
+        btn.innerHTML = '<span class="sys-check">' + checkSvg + '</span><span>' + sys.name + "</span>";
+        btn.addEventListener("click", function () { selectedSys = sys.id; renderExplorer(); });
+        li.appendChild(btn);
+        mechList.appendChild(li);
+      } else {
+        var ex = document.createElement("button");
+        ex.type = "button";
+        ex.className = "extra-btn" + (isActive ? " active" : "");
+        ex.setAttribute("aria-pressed", String(isActive));
+        ex.innerHTML = '<span class="display">' + sys.name + '</span><small>Incluido en toda inspección</small>';
+        ex.addEventListener("click", function () { selectedSys = sys.id; renderExplorer(); });
+        extraList.appendChild(ex);
+      }
+    });
+
+    var current = SYSTEMS.find(function (s) { return s.id === selectedSys; }) || SYSTEMS[0];
+    var checksHtml = current.checks.map(function (c) {
+      return "<li>" + checkSvg + "<span>" + c + "</span></li>";
+    }).join("");
+    detailCard.innerHTML =
+      '<div>' +
+        '<div class="detail-head">' +
+          '<span class="detail-icon">' + wrenchSvg + '</span>' +
+          '<div><p class="detail-kicker">Detalle de inspección</p><h3>' + current.name + '</h3></div>' +
+        '</div>' +
+        '<p class="detail-note">' + current.note + '</p>' +
+        '<ul class="check-list">' + checksHtml + '</ul>' +
+      '</div>' +
+      '<p class="detail-foot">Además de habitáculo y exterior, todo queda registrado en tu informe de revisión.</p>';
+  }
+
+  function renderReport(tabId) {
+    var data = REPORTS[tabId] || REPORTS.mecanica;
+    document.getElementById("reportTitle").textContent = data.title;
+    document.getElementById("reportSubtitle").textContent = data.subtitle;
+    var rowsEl = document.getElementById("reportRows");
+    rowsEl.innerHTML = data.rows.map(function (r) {
+      var badge = r.ok
+        ? '<span class="badge-ok">' + okSvg + "Verificado</span>"
+        : '<span class="badge-warn">' + warnSvg + "Observación</span>";
+      return '<div class="report-row"><div><strong>' + r.label + "</strong><small>" + r.detail + "</small></div>" + badge + "</div>";
+    }).join("");
+    document.querySelectorAll("[data-report-tab]").forEach(function (btn) {
+      var active = btn.getAttribute("data-report-tab") === tabId;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-selected", String(active));
+    });
+  }
+
+  function buildWaUrl(vehId, model, sector) {
+    var plan = PLANS[vehId] || PLANS["auto-suv"];
+    var parts = ["Hola, quiero agendar una inspección pre compra para " + plan.name + " (" + plan.price + ")"];
+    if (model && model.trim()) parts.push("Vehículo: " + model.trim().slice(0, 80));
+    if (sector && sector.trim()) parts.push("Sector: " + sector.trim().slice(0, 80));
+    return "https://wa.me/56951086174?text=" + encodeURIComponent(parts.join(". "));
+  }
+
+  function setVehicle(vehId) {
+    selectedVeh = PLANS[vehId] ? vehId : "auto-suv";
+    document.getElementById("bookingPrice").textContent = PLANS[selectedVeh].price;
+    var url = buildWaUrl(selectedVeh);
+    document.getElementById("directWaBtn").href = url;
+    document.getElementById("floatWaBtn").href = url;
+    document.querySelectorAll("[data-veh]").forEach(function (btn) {
+      var active = btn.getAttribute("data-veh") === selectedVeh;
+      btn.classList.toggle("active", active);
+      btn.setAttribute("aria-pressed", String(active));
+    });
+  }
+
+  document.querySelectorAll("[data-report-tab]").forEach(function (btn) {
+    btn.addEventListener("click", function () { renderReport(btn.getAttribute("data-report-tab")); });
+  });
+  document.querySelectorAll("[data-veh]").forEach(function (btn) {
+    btn.addEventListener("click", function () { setVehicle(btn.getAttribute("data-veh")); });
+  });
+  document.querySelectorAll("[data-choose-plan]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      setVehicle(btn.getAttribute("data-choose-plan"));
+      var target = document.getElementById("contacto");
+      if (target) target.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+
+  document.getElementById("bookingForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var model = document.getElementById("vehModel").value;
+    var sector = document.getElementById("vehSector").value;
+    window.open(buildWaUrl(selectedVeh, model, sector), "_blank", "noopener,noreferrer");
+  });
+
+  var menuBtn = document.getElementById("menuToggle");
+  var mobileNav = document.getElementById("mobileNav");
+  menuBtn.addEventListener("click", function () {
+    var open = mobileNav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(open));
+  });
+  mobileNav.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      mobileNav.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  renderExplorer();
+  renderReport("mecanica");
+  setVehicle("auto-suv");
+})();
+</script>
+</body>
+</html>
